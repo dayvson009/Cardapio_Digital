@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* html {
+  scroll-behavior: smooth;
+} */
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 920px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.logo {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.title {
+    font-size: 24px;
+    color: #333;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+#search {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.categories-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.categories {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+}
+
+.categories li {
+    margin-right: 10px;
+}
+
+.categories a {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #ff8300;
+    color: #fff;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.categories a:hover {
+    background-color: #ff9019;
+}
+
+.products-container {
+    margin-bottom: 20px;
+}
+
+.category {
+    margin-bottom: 20px;
+}
+
+.category h2 {
+    font-size: 20px;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.product-title {
+    flex-grow: 1;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Seção do Cabeçalho -->
+        <header class="header">
+            <div class="logo-container">
+                <img src="./images/logo-boteco-j5.jpg" alt="Logo Cliente" class="logo">
+            </div>
+            <h1 class="title">Logo Cliente</h1>
+        </header>
+
+        <!-- Campo de Busca -->
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Buscar produtos...">
+        </div>
+
+        <!-- Seção de Categorias -->
+        <nav class="categories-container">
+            <ul class="categories">
+                <li><a href="#petiscos">Petiscos</a></li>
+                <li><a href="#caldinhos">Caldinhos</a></li>
+                <li><a href="#almoco">Almoço</a></li>
+                <li><a href="#sucos">Sucos</a></li>
+                <li><a href="#bebidas">Bebidas</a></li>
+                <li><a href="#Cervejas">Cervejas</a></li>
+                <li><a href="#destilados">Destilados</a></li>
+                <li><a href="#drinks">Drinks</a></li>
+            </ul>
+        </nav>
+
+        <!-- Lista de Produtos -->
+        <section class="products-container">
+            <div id="petiscos" class="category">
+                <h2>Petiscos</h2>
+                <div class="product">
+                    <img src="./images/calabresa-fritas.jpg" alt="CALABRESA C/FRITAS 700g" class="product-image">
+                    <span class="product-title">CALABRESA C/FRITAS 700g</span>
+                    <span class="product-price">R$ 28,99</span>
+                </div>
+                <div class="product">
+                    <img src="./images/camaraoempanado.png" alt="CAMARÃO EMPANADO 400g" class="product-image">
+                    <span class="product-title">CAMARÃO EMPANADO 400g</span>
+                    <span class="product-price">R$ 24,90</span>
+                </div>
+                <div class="product">
+                    <img src="./images/carnesol-fritas.jpg" alt="CARNE DE SOL C/FRITAS 700g" class="product-image">
+                    <span class="product-title">CARNE DE SOL C/FRITAS 700g</span>
+                    <span class="product-price">R$ 40,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/Bolinho-bacalhau.jpg" alt="BOLINHO DE BACALHAU" class="product-image">
+                    <span class="product-title">BOLINHO DE BACALHAU</span>
+                    <span class="product-price">R$ 14,90</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="FRANGO A PASSARINHO C/FRITAS 700g" class="product-image">
+                    <span class="product-title">FRANGO A PASSARINHO C/FRITAS 700g</span>
+                    <span class="product-price">R$ 31,99</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="BOLINHO DE CHARQUE" class="product-image">
+                    <span class="product-title">BOLINHO DE CHARQUE</span>
+                    <span class="product-price">R$ 14,90</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="CAMARÃO ALHO E ÓLEO 400g" class="product-image">
+                    <span class="product-title">CAMARÃO ALHO E ÓLEO 400g</span>
+                    <span class="product-price">R$ 45,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="PORÇÃO DE FRITAS 300G" class="product-image">
+                    <span class="product-title">PORÇÃO DE FRITAS 300G</span>
+                    <span class="product-price">R$ 14,90</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="CAMARÃO AO COCO 400g" class="product-image">
+                    <span class="product-title">CAMARÃO AO COCO 400g</span>
+                    <span class="product-price">R$ 49,90</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="ESPETINHO" class="product-image">
+                    <span class="product-title">ESPETINHO</span>
+                    <span class="product-price">R$ 10,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="MARISCO AO COCO 400g " class="product-image">
+                    <span class="product-title">MARISCO AO COCO 400g </span>
+                    <span class="product-price">R$ 30,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="PORÇÃO DE 10 PASTELZINHOS" class="product-image">
+                    <span class="product-title">PORÇÃO DE 10 PASTELZINHOS</span>
+                    <span class="product-price">R$ 20,00</span>
+                </div>
+            </div>
+            <div id="caldinhos" class="category">
+                <h2>Caldinhos</h2>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="CAMARÃO" class="product-image">
+                    <span class="product-title">CAMARÃO</span>
+                    <span class="product-price">R$ 10,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="SURURU" class="product-image">
+                    <span class="product-title">SURURU</span>
+                    <span class="product-price">R$ 08,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="MARISCO" class="product-image">
+                    <span class="product-title">MARISCO</span>
+                    <span class="product-price">R$ 08,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="FEIJOADA" class="product-image">
+                    <span class="product-title">FEIJOADA</span>
+                    <span class="product-price">R$ 09,00</span>
+                </div>
+            </div>
+            <div id="almoco" class="category">
+                <h2>Almoço</h2>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="SELF SERVICE SEM BALANÇA" class="product-image">
+                    <span class="product-title">SELF SERVICE SEM BALANÇA</span>
+                    <span class="product-price">R$ 17,00</span>
+                </div>
+            </div>
+            <div id="sucos" class="category">
+                <h2>Sucos</h2>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="400ML" class="product-image">
+                    <span class="product-title">400ML</span>
+                    <span class="product-price">R$ 5,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="JARRA" class="product-image">
+                    <span class="product-title">JARRA</span>
+                    <span class="product-price">R$ 10,00</span>
+                </div>
+            </div>
+            <div id="bebidas" class="category">
+                <h2>Bebidas</h2>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="ÁGUA SEM GÁS" class="product-image">
+                    <span class="product-title">ÁGUA SEM GÁS</span>
+                    <span class="product-price">R$ 2,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="ÁGUA COM GÁS" class="product-image">
+                    <span class="product-title">ÁGUA COM GÁS</span>
+                    <span class="product-price">R$ 3,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="SODA" class="product-image">
+                    <span class="product-title">SODA</span>
+                    <span class="product-price">R$ 10,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="CORONA" class="product-image">
+                    <span class="product-title">CORONA</span>
+                    <span class="product-price">R$ 10,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="COCA-COLA 1LT" class="product-image">
+                    <span class="product-title">COCA-COLA 1LT</span>
+                    <span class="product-price">R$ 10,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="MONSTER" class="product-image">
+                    <span class="product-title">MONSTER</span>
+                    <span class="product-price">R$ 10,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="GUARANÁ ANTÁRTICA 1LT" class="product-image">
+                    <span class="product-title">GUARANÁ ANTÁRTICA 1LT</span>
+                    <span class="product-price">R$ 10,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="SUCO DELL VALLE" class="product-image">
+                    <span class="product-title">SUCO DELL VALLE</span>
+                    <span class="product-price">R$ 5,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="FANTA 1LT" class="product-image">
+                    <span class="product-title">FANTA 1LT</span>
+                    <span class="product-price">R$ 10,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="SCHWEPPES CITRUS" class="product-image">
+                    <span class="product-title">SCHWEPPES CITRUS</span>
+                    <span class="product-price">R$ 5,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="COCA-COLA LATA" class="product-image">
+                    <span class="product-title">COCA-COLA LATA</span>
+                    <span class="product-price">R$ 5,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="ICE 300ML" class="product-image">
+                    <span class="product-title">ICE 300ML</span>
+                    <span class="product-price">R$ 0,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="FANTA LATA" class="product-image">
+                    <span class="product-title">FANTA LATA</span>
+                    <span class="product-price">R$ 4,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="ÁGUA TÔNICA" class="product-image">
+                    <span class="product-title">ÁGUA TÔNICA</span>
+                    <span class="product-price">R$ 5,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="GUARANÁ ANTÁRTICA LATA" class="product-image">
+                    <span class="product-title">GUARANÁ ANTÁRTICA LATA</span>
+                    <span class="product-price">R$ 5,00</span>
+                </div>
+            </div>
+            <div id="Cervejas" class="category">
+                <h2>Cervejas</h2>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="HEINEKEN 600ML" class="product-image">
+                    <span class="product-title">HEINEKEN 600ML</span>
+                    <span class="product-price">R$ 17,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="SPATEN 600ML" class="product-image">
+                    <span class="product-title">SPATEN 600ML</span>
+                    <span class="product-price">R$ 15,90</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="BUDWEISER 600ML" class="product-image">
+                    <span class="product-title">BUDWEISER 600ML</span>
+                    <span class="product-price">R$ 13,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="BRAHMA LATÃO" class="product-image">
+                    <span class="product-title">BRAHMA LATÃO</span>
+                    <span class="product-price">R$ 8,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="BRAHMA 600ML" class="product-image">
+                    <span class="product-title">BRAHMA 600ML</span>
+                    <span class="product-price">R$ 13,00</span>
+                </div>
+            </div>
+            <div id="destilados" class="category">
+                <h2>Destilados</h2>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="JHONE RED (DOSE)" class="product-image">
+                    <span class="product-title">JHONE RED (DOSE)</span>
+                    <span class="product-price">R$ 12,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="WHITE HORSE (DOSE)" class="product-image">
+                    <span class="product-title">WHITE HORSE (DOSE)</span>
+                    <span class="product-price">R$ 8,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="JHONE RED (LITRO)" class="product-image">
+                    <span class="product-title">JHONE RED (LITRO)</span>
+                    <span class="product-price">R$ 160,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="BLACK E WHITE [DOSE]" class="product-image">
+                    <span class="product-title">BLACK E WHITE [DOSE]</span>
+                    <span class="product-price">R$ 6,00</span>
+                </div>
+            </div>
+            <div id="drinks" class="category">
+                <h2>Drinks</h2>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="CAIPIROSKA" class="product-image">
+                    <span class="product-title">CAIPIROSKA</span>
+                    <span class="product-price">R$ 12,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="COQUETEL DE FRUTAS" class="product-image">
+                    <span class="product-title">COQUETEL DE FRUTAS</span>
+                    <span class="product-price">R$ 14,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="CAIPIRINHA" class="product-image">
+                    <span class="product-title">CAIPIRINHA</span>
+                    <span class="product-price">R$ 10,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="COQUETEL DE FRUTAS C/GIN TÔNICA" class="product-image">
+                    <span class="product-title">COQUETEL DE FRUTAS C/GIN TÔNICA</span>
+                    <span class="product-price">R$ 16,00</span>
+                </div>
+                <div class="product">
+                    <img src="./images/logo-boteco-j5.jpg" alt="GIN TÔNICA" class="product-image">
+                    <span class="product-title">GIN TÔNICA</span>
+                    <span class="product-price">R$ 10,00</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+     <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search');
+    const categories = document.querySelectorAll('.category');
+
+    searchInput.addEventListener('keyup', function() {
+        const searchTerm = searchInput.value.toLowerCase();
+
+        categories.forEach(function(category) {
+            let hasVisibleProducts = false;
+            const products = category.querySelectorAll('.product');
+
+            products.forEach(function(product) {
+                const title = product.querySelector('.product-title').textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    product.style.display = '';
+                    hasVisibleProducts = true;
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+
+            // Exibe o título da categoria apenas se houver produtos visíveis
+            const categoryTitle = category.querySelector('h2');
+            if (hasVisibleProducts) {
+                categoryTitle.style.display = '';
+                category.style.display = '';
+            } else {
+                categoryTitle.style.display = 'none';
+                category.style.display = 'none';
+            }
+        });
+    });
+
+    const categoryLinks = document.querySelectorAll('.categories a');
+
+    categoryLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
+
+     </script>
+</body>
+</html>
