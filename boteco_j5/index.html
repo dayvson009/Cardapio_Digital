@@ -67,6 +67,10 @@
     overflow-x: auto;
     white-space: nowrap;
     margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
 }
 
 .categories {
@@ -155,14 +159,14 @@
         <!-- Seção de Categorias -->
         <nav class="categories-container">
             <ul class="categories">
-                <li><a href="#petiscos">Petiscos</a></li>
-                <li><a href="#caldinhos">Caldinhos</a></li>
-                <!-- <li><a href="#almoco">Almoço</a></li> -->
-                <!-- <li><a href="#sucos">Sucos</a></li> -->
-                <li><a href="#bebidas">Bebidas</a></li>
-                <li><a href="#Cervejas">Cervejas</a></li>
-                <li><a href="#destilados">Destilados</a></li>
-                <li><a href="#drinks">Drinks</a></li>
+                <li><a href="#petiscos" onclick="sendActivity('Botão Categoria Petiscos')">Petiscos</a></li>
+                <li><a href="#caldinhos" onclick="sendActivity('Botão Categoria Caldinhos')">Caldinhos</a></li>
+                <!-- <li><a href="#almoco" onclick="sendActivity('Botão Categoria Almoço</a>')">Almoço</a></li> -->
+                <!-- <li><a href="#sucos" onclick="sendActivity('Botão Categoria Sucos</a>')">Sucos</a></li> -->
+                <li><a href="#bebidas" onclick="sendActivity('Botão Categoria Bebidas')">Bebidas</a></li>
+                <li><a href="#Cervejas" onclick="sendActivity('Botão Categoria Cervejas')">Cervejas</a></li>
+                <li><a href="#destilados" onclick="sendActivity('Botão Categoria Destilados')">Destilados</a></li>
+                <li><a href="#drinks" onclick="sendActivity('Botão Categoria Drinks')">Drinks</a></li>
             </ul>
         </nav>
 
@@ -405,7 +409,7 @@
         </section>
     </div>
 
-    <!-- <script src="script.js"></script> -->
+    <script src="./scripts/activity.js"></script>
      <script>
       document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search');
